@@ -7,7 +7,9 @@ flood-prone coastal road network of Semarang, Indonesia. Final project for the
 Full report: [Comparative Analysis of A-Star, Branch and Bound, and Time-Dependent
 Customized A-Star for Flood and Tidal Rob Evacuation in Semarang City.pdf](Comparative%20Analysis%20of%20A-Star,%20Branch%20and%20Bound,%20and%20Time-Dependent%20Customized%20A-Star%20for%20Flood%20and%20Tidal%20Rob%20Evacuation%20in%20Semarang%20City.pdf)
 
-[![Title page of the report](screenshots/page1.png)](Comparative%20Analysis%20of%20A-Star,%20Branch%20and%20Bound,%20and%20Time-Dependent%20Customized%20A-Star%20for%20Flood%20and%20Tidal%20Rob%20Evacuation%20in%20Semarang%20City.pdf)
+<div align="center">
+  <a href="Comparative%20Analysis%20of%20A-Star,%20Branch%20and%20Bound,%20and%20Time-Dependent%20Customized%20A-Star%20for%20Flood%20and%20Tidal%20Rob%20Evacuation%20in%20Semarang%20City.pdf"><img src="screenshots/page1.png" width="50%" alt="Title page of the report"></a>
+</div>
 
 ## Experiment Overview
 
@@ -17,11 +19,13 @@ the area that floods first during high tide) to a designated evacuation shelter
 
 Three algorithms are compared on the same road graph and tide data:
 
+<div align="center">
 | Algorithm        | Role                                           |
 | ---------------- | ---------------------------------------------- |
 | Standard A\*     | static baseline, blind to flooding             |
 | Branch and Bound | exact control, DFS + pruning                   |
 | Custom TD-A\*    | proposed; A\* with time-dependent edge weights |
+</div>
 
 **Physical model.** Water depth at each node = sea level at time `t` (BMKG tide
 data, 10-minute resolution) minus terrain elevation (DEMNAS raster). A penalty
@@ -37,6 +41,7 @@ elevation <= 1.0 m. Goal: Posko Balai Desa Rejomulyo.
 
 ### Results
 
+<div align="center">
 | Metric         | Standard A\* | Branch and Bound | Custom TD-A\* |
 | -------------- | ------------ | ---------------- | ------------- |
 | Running time   | 31.61 ms     | 68.63 s          | 174.52 ms     |
@@ -45,6 +50,7 @@ elevation <= 1.0 m. Goal: Posko Balai Desa Rejomulyo.
 | Route length   | 3.17 km      | 5.88 km          | 5.94 km       |
 | Flood exposure | 2.1209 m     | 0.4781 m         | 0.0830 m      |
 | Success rate   | 0.00%        | 100.00%          | 100.00%       |
+</div>
 
 **Key findings:**
 
@@ -62,15 +68,17 @@ elevation <= 1.0 m. Goal: Posko Balai Desa Rejomulyo.
 ## Repository Layout
 
 ```
-notebooks/
-  evacuation_simulation_v1.ipynb   Full pipeline: data loading -> algorithms -> results -> figures
-data/
-  chart_data.csv                   BMKG tide series (EST column, 10-minute interval)
-  DEMNAS_1409-22_v1.0.tif         National terrain elevation raster
-spatial_map/                       Semarang flood / rob risk maps
-literature/                        Supporting papers and references
-screenshots/                       Report screenshots
-Proyek Makalah Analisis dan Strategi Algoritma 2026 (1).pdf
+.
+├── notebooks/
+│   └── evacuation_simulation_v1.ipynb   # full pipeline: data -> algorithms -> results -> figures
+├── data/
+│   ├── chart_data.csv                   # BMKG tide series (EST column, 10-minute interval)
+│   └── DEMNAS_1409-22_v1.0.tif          # national terrain elevation raster
+├── spatial_map/                         # Semarang flood / rob risk maps
+├── literature/                          # supporting papers and references
+├── screenshots/                         # report screenshots
+├── Comparative Analysis of A-Star, ... Semarang City.pdf
+└── Proyek Makalah Analisis dan Strategi Algoritma 2026 (1).pdf
 ```
 
 ## Running the Notebook
