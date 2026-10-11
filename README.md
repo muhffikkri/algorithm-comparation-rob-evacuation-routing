@@ -19,13 +19,13 @@ the area that floods first during high tide) to a designated evacuation shelter
 
 Three algorithms are compared on the same road graph and tide data:
 
-<div align="center">
+<center>
 | Algorithm        | Role                                           |
 | ---------------- | ---------------------------------------------- |
 | Standard A\*     | static baseline, blind to flooding             |
 | Branch and Bound | exact control, DFS + pruning                   |
 | Custom TD-A\*    | proposed; A\* with time-dependent edge weights |
-</div>
+</center>
 
 **Physical model.** Water depth at each node = sea level at time `t` (BMKG tide
 data, 10-minute resolution) minus terrain elevation (DEMNAS raster). A penalty
@@ -41,7 +41,7 @@ elevation <= 1.0 m. Goal: Posko Balai Desa Rejomulyo.
 
 ### Results
 
-<div align="center">
+<center>
 | Metric         | Standard A\* | Branch and Bound | Custom TD-A\* |
 | -------------- | ------------ | ---------------- | ------------- |
 | Running time   | 31.61 ms     | 68.63 s          | 174.52 ms     |
@@ -50,7 +50,7 @@ elevation <= 1.0 m. Goal: Posko Balai Desa Rejomulyo.
 | Route length   | 3.17 km      | 5.88 km          | 5.94 km       |
 | Flood exposure | 2.1209 m     | 0.4781 m         | 0.0830 m      |
 | Success rate   | 0.00%        | 100.00%          | 100.00%       |
-</div>
+</center>
 
 **Key findings:**
 
