@@ -7,7 +7,7 @@ flood-prone coastal road network of Semarang, Indonesia. Final project for the
 Full report: [Comparative Analysis of A-Star, Branch and Bound, and Time-Dependent
 Customized A-Star for Flood and Tidal Rob Evacuation in Semarang City.pdf](Comparative%20Analysis%20of%20A-Star,%20Branch%20and%20Bound,%20and%20Time-Dependent%20Customized%20A-Star%20for%20Flood%20and%20Tidal%20Rob%20Evacuation%20in%20Semarang%20City.pdf)
 
-[![Full Paper](screenshots\page1.png)](Comparative%20Analysis%20of%20A-Star,%20Branch%20and%20Bound,%20and%20Time-Dependent%20Customized%20A-Star%20for%20Flood%20and%20Tidal%20Rob%20Evacuation%20in%20Semarang%20City.pdf)
+[![Title page of the report](screenshots/page1.png)](Comparative%20Analysis%20of%20A-Star,%20Branch%20and%20Bound,%20and%20Time-Dependent%20Customized%20A-Star%20for%20Flood%20and%20Tidal%20Rob%20Evacuation%20in%20Semarang%20City.pdf)
 
 ## Experiment Overview
 
